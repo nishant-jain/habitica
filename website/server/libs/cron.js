@@ -68,7 +68,7 @@ async function grantEndOfTheMonthPerks (user, now) {
 
   const { plan, elapsedMonths } = getPlanContext(user, now);
 
-  if (elapsedMonths > 0) {
+  if (true) {
     plan.dateUpdated = now;
     // For every month, inc their "consecutive months" counter.
     // Give perks based on consecutive blocks
@@ -76,7 +76,7 @@ async function grantEndOfTheMonthPerks (user, now) {
     // subscription gifts, etc) - then dec the offset until it hits 0
 
     // Award mystery items
-    revealMysteryItems(user, elapsedMonths);
+    revealMysteryItems(user, 1);
 
     // 1 for one-month recurring or gift subscriptions; later set to 3 for 3-month recurring, etc.
     let planMonthsLength = 1;

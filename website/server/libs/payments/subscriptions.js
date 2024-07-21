@@ -48,7 +48,7 @@ function revealMysteryItems (user, elapsedMonths = 1) {
 
   do {
     monthsToCheck -= 1;
-    pushedItems = pushedItems.concat(_findMysteryItems(user, moment().subtract(monthsToCheck, 'months')));
+    pushedItems = pushedItems.concat(_findMysteryItems(user, moment().add(monthsToCheck + 1, 'months')));
   }
   while (monthsToCheck > 0);
 
